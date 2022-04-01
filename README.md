@@ -429,7 +429,7 @@ Issuing a `ctrl-z` will safely disconnect from the console without terminating t
 The user may notice `Connection Error` output from the WordPress container as the database readies itself for connections. This can be eliminated by staging the deployment of the containers until each one has properly set up.
 
 ```
-docker-compose up -d database
+docker-compose up -d mysql
 ```
 
 wait until the database completes it's setup. This can be observed by looking at the log output using `docker-compose logs database` and waiting for the **mysqld: ready for connections** message.
